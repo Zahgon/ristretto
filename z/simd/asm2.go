@@ -1,11 +1,6 @@
 //go:build ignore
 // +build ignore
 
-/*
- * SPDX-FileCopyrightText: © 2017-2025 Istari Digital, Inc.
- * SPDX-License-Identifier: Apache-2.0
- */
-
 package main
 
 import (
@@ -72,7 +67,7 @@ func main() {
 	ADDL(Imm(6), idx.As32())
 
 	Label("Found")
-	MOVL(idx.As32(), n2.As32()) // n2 is no longer being used
+	MOVL(idx.As32(), n2.As32())
 
 	Label("NotFound")
 	MOVL(n2.As32(), idx.As32())

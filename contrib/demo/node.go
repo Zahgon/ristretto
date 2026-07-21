@@ -16,15 +16,7 @@ type node struct {
 
 var alloc *z.Allocator
 
-func printNode(n *node) {
-	if n == nil {
-		return
-	}
-	if n.val%100000 == 0 {
-		fmt.Printf("node: %d\n", n.val)
-	}
-	printNode(n.next)
-}
+func printNode(n *node) { _ = "STUB: not implemented"; return }
 
 func main() {
 	N := 2000001

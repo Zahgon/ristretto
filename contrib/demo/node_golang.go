@@ -3,8 +3,6 @@
 
 package main
 
-func newNode(val int) *node {
-	return &node{val: val}
-}
+func newNode(val int) *node { _ = "STUB: not implemented"; return nil }
 
-func freeNode(n *node) {}
+func freeNode(n *node) { _ = "STUB: not implemented"; return }
