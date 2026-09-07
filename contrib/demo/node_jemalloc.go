@@ -3,20 +3,6 @@
 
 package main
 
-import (
-	"unsafe"
+func newNode(val int) *node { _ = "STUB: not implemented"; return nil }
 
-	"github.com/dgraph-io/ristretto/v2/z"
-)
-
-func newNode(val int) *node {
-	b := z.Calloc(nodeSz, "demo")
-	n := (*node)(unsafe.Pointer(&b[0]))
-	n.val = val
-	return n
-}
-
-func freeNode(n *node) {
-	buf := (*[z.MaxArrayLen]byte)(unsafe.Pointer(n))[:nodeSz:nodeSz]
-	z.Free(buf)
-}
+func freeNode(n *node) { _ = "STUB: not implemented"; return }

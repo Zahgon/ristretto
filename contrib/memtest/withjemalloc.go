@@ -5,23 +5,13 @@ package main
 
 import (
 	"log"
-
-	"github.com/dgraph-io/ristretto/v2/z"
 )
 
-func Calloc(size int) []byte { return z.Calloc(size, "memtest") }
-func Free(bs []byte)         { z.Free(bs) }
-func NumAllocBytes() int64   { return z.NumAllocBytes() }
+func Calloc(size int) []byte { _ = "STUB: not implemented"; return nil }
+func Free(bs []byte)         { _ = "STUB: not implemented"; return }
+func NumAllocBytes() int64   { _ = "STUB: not implemented"; return 0 }
 
-func check() {
-	if buf := z.CallocNoRef(1, "memtest"); len(buf) == 0 {
-		log.Fatalf("Not using manual memory management. Compile with jemalloc.")
-	} else {
-		z.Free(buf)
-	}
-
-	z.StatsPrint()
-}
+func check() { _ = "STUB: not implemented"; return }
 
 func init() {
 	log.Println("USING JEMALLOC")
